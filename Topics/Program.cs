@@ -81,6 +81,14 @@ namespace Topics
             //use of base keyword
             SubConstructor sub = new SubConstructor(44);
             Console.WriteLine("Status is: {0} and value is {1}", sub.IsInitialized, sub.v1 );
+
+            Employee e1 = new Employee(3300);
+            Manager m1 = new Manager(1000);
+            Console.WriteLine("Basic Salary = {0} and Full Salary = {1}", m1.basicSalary, m1.fullSalary);
+
+            Clerk c1 = new Clerk(1000);
+
+            Console.WriteLine("Basic Salary = {0} and Full Salary = {1}",c1.basicSalary, c1.fullSalary);
             Console.ReadKey();
         }
 

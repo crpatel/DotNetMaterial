@@ -55,6 +55,31 @@ namespace Topics
             p2 = b;
         }
     }
-
+    public class Employee
+    {
+        public  int fullSalary;
+        public  int basicSalary;
+        public Employee(int sal)
+        {
+            basicSalary = sal;
+        }
+    }
+    public class Manager : Employee
+    {
+        static int incentives = 10;
+        public Manager(int sal):base(sal)
+        {
+            fullSalary = basicSalary + (basicSalary*incentives) / 100;     
+        }
+        
+    }
+    public class Clerk : Employee
+    {
+        static int incentives = 5;
+        public Clerk(int sal):base(sal)
+        {
+            fullSalary = basicSalary + (basicSalary * incentives) / 100;
+        }
+    }
 
 }
