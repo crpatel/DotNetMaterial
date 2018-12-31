@@ -36,6 +36,20 @@ namespace Topics
             //valIn = 8;
             Console.WriteLine("INSIDE SquareIn: valIn = {0}", valIn);
         }
+
+        public static void changeVal(int[] arr)
+        {
+            arr[0] = 11; //this change affects the original element.
+            arr = new int[] { 12, 12, 12 }; // This change is local.
+            Console.WriteLine("INSIDE: arr[0]= {0}", arr[0]);
+        }
+
+        public static void changeRef(ref int[] arr)
+        {
+            arr[0] = 123;
+            arr = new int[] { 44, 55, 66 };
+            Console.WriteLine("INSIDE: arr[0]= {0}", arr[0]);
+        }
     }
 
 }

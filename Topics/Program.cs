@@ -10,6 +10,7 @@ namespace Topics
     {
         static void Main(string[] args)
         {
+            //Value Type Variables
             //1. Pass by Value
             int val = 3; //This can not change outside this method
             Console.WriteLine("Pass By Value");
@@ -40,7 +41,19 @@ namespace Topics
             PassBy.SquareIn(in valIn);
             Console.WriteLine("AFTER: valIn = {0}", valIn);
 
+            //Reference Type Variable
+            //Pass By Value
+            int[] arrVal = new int[] { 1, 2, 3 };
+            Console.WriteLine("BEFORE: arr[0]= {0}", arrVal[0]);
+            PassBy.changeVal(arrVal);
+            Console.WriteLine("AFTER: arr[0]= {0}", arrVal[0]);
 
+            //Pass By Reference
+            int[] arrRef = new int[] { 4, 5, 6 };
+            
+            Console.WriteLine("BEFORE: arrRef[0]= {0}", arrRef[0]);
+            PassBy.changeRef(ref arrRef);
+            Console.WriteLine("AFTER: arrRef[0]= {0}", arrRef[0]);
             Console.ReadKey();
         }
 
